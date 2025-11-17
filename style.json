@@ -1,0 +1,21 @@
+{
+  "version": 8,
+  "sources": {
+    "te-ara-hura": {
+      "type": "geojson",
+      "data": "sources/te_ara_hura.geojson"
+    }
+  },
+  "layers": [
+    {
+      "id": "trail-line",
+      "type": "line",
+      "source": "te-ara-hura",
+      "paint": {
+        "line-color": "#e41f18",
+        "line-width": 3,
+        "line-dasharray": [2, 2]
+      }
+    }
+  ]
+}
