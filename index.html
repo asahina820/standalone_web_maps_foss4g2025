@@ -8,6 +8,8 @@
     <!-- Local copies of MapLibre GL JS -->
     <script src="lib/maplibre-gl.5.10.0.js"></script>
     <link href="lib/maplibre-gl.5.10.0.css" rel="stylesheet" />
+    <!-- PMTiles support -->
+    <script src="lib/pmtiles.4.3.0.js"></script>
 
     <style>
       /* Required CSS statements defining the map to be the full size of the viewport*/
@@ -21,6 +23,9 @@
     <div id="map"></div>
 
     <script>
+      // Initialize PMTiles protocol
+      const protocol = new pmtiles.Protocol();
+      maplibregl.addProtocol("pmtiles", protocol.tile);
       // Javascript to create a new map using Maplibre GL JS
       const map = new maplibregl.Map({
         container: "map",
